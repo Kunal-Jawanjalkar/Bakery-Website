@@ -1,0 +1,82 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet' type="text/css" href='../static/css/style.css')
+        link(rel='stylesheet' href='../static/css/login.css')
+        link(rel='stylesheet' href='../static/css/cart.css')
+        link(rel='stylesheet' media='screen and (max-width:1060px)' href='../static/css/media.css')
+        link(rel='preconnect' href='https://fonts.gstatic.com')
+        link(href='https://fonts.googleapis.com/css2?family=KoHo&display=swap' rel='stylesheet')
+        title #{title}
+    body 
+        header
+            nav.navbar
+                .logo
+                    a(href='/')
+                        img(src='../static/images/logo.png' alt='logo')
+                ul.navigation-menu
+                    li.menu-items #[a(href='/') Home]                       
+                    li.menu-items #[a(href='/#about') About Us]
+                    li.menu-items #[a(href='/orderonline') Order Online]
+                    li.menu-items #[a(href='/') Contact Us]
+                    li.menu-items #[a(href='/') My Account]
+                .search
+                    input(type='text' placeholder='Search for products')
+                    button#search-btn search
+                .navigation-toggle
+                    span
+                    span
+                    span
+                .login
+                    ul 
+                        li #[a(href="/login") Login] &nbsp;|&nbsp;
+                        li #[a(href="/signup") SignUp]
+        block content 
+
+        footer
+            .footerContent
+                .logo.footerlogo
+                    a(href='/')
+                        img(src='../static/images/logo.png' alt='logo')
+                .footerMain
+                    ul
+                        h1.heading.left Our Products
+                        li #[a(href='/orderonline') Red Velvet]
+                        li #[a(href='/orderonline') Choco Cookies]
+                        li #[a(href='/orderonline') Vanilla Pasteries]
+                        li #[a(href='/orderonline') Flavoured Cookies]
+                        li #[a(href='/orderonline') Pizza]
+                    ul
+                        h1.heading.left Our Services
+                        li #[a(href='') Weddings]
+                        li #[a(href='') Birthdays]
+                        li #[a(href='') Events]
+                        li #[a(href='') Anniversary]
+                        li #[a(href='') House Warmings]
+                    ul
+                        li
+                        h1.heading.left Contact Us
+                        li #[a(href='') Weddings]              
+                        li #[a(href='') Event Management]                    
+                        li #[a(href='') Birthdays]                   
+                        li #[a(href='') Anniversary]  
+                        li #[a(href='') Parties]
+                .socialMedia
+                    .iconWrapper
+                        a(href='https://facebook.com')
+                            img(src='../static/images/facebook.png' alt='')
+                    .iconWrapper
+                        a(href='https://instagram.com')
+                            img(src='../static/images/instagram.png' alt='')
+                    .iconWrapper
+                        a(href='https://twitter.com')
+                            img(src='../static/images/twitter.png' alt='')
+                    .iconWrapper
+                        a(href='https://email@gmail.com')
+                            img(src='../static/images/email.png' alt='')
+            .copyright.center
+                p Copyright &copy; | www.xyzabc.com | All rights reserved
+        script(src='../static/js/client.js')

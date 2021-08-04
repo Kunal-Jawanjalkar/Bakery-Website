@@ -1,0 +1,20 @@
+extends base.pug
+
+block content 
+    section#login 
+        h1.heading.center Login
+        form#loginForm.loginForm
+            h3.center.alert  
+            .loginDetail 
+                label(for="email") Email:
+                input#email.login-email(type="text", name="email" placeholder="Enter your email here")
+            .loginDetail
+                label(for="password") Password:
+                input#password.login-password(type="password", name="password" placeholder="Enter your password here")
+            button.btn.login-btn Login
+        .message.center 
+            | Not Registered | 
+            a(href="/signup") 
+                strong SignUp         
+
+    

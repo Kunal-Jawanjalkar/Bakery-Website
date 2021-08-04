@@ -1,0 +1,27 @@
+extends base.pug
+
+block content 
+    //- login form                
+    section#login 
+        h1.heading.center SignUp
+        form#loginForm(action="/signup" method="post")
+            h3.center #{alert}
+            .loginDetail 
+                label(for="username") Username:
+                input#username(type="text", name="username" placeholder="Enter your username here")
+            .loginDetail 
+                label(for="email") Email:
+                input#email(type="text", name="email" placeholder="Enter your email here")
+            .loginDetail
+                label(for="password") Set Password:
+                input#password(type="password", name="password" placeholder="Enter your password here")
+            .loginDetail
+                label(for="password2") Confirm Password:
+                input#password2(type="password", name="repeat_password" placeholder="Confirmed password ")
+            button.btn.sign-up Register
+        .message.center 
+            | Already Registered | 
+            a(href="/login") 
+                strong Login         
+
+            

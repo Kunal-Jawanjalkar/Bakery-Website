@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "KoHo", sans-serif;
+  scroll-behavior: smooth;
+}
+:root {
+  --primary-color: #ac3b61;
+  --secondary-color: #edc7b7;
+  --tertiary-color: #123c69;
+  --background-color: #fff6f1;
+}
+
+/* ******** HEADER ************ */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 4.3rem;
+  box-shadow: 2px 0 8px var(--primary-color);
+  background-color: #edc7b7ee;
+}
+
+nav.navbar .logo {
+  position: relative;
+  top: 32px;
+}
+nav.navbar .logo img {
+  width: 8.3rem;
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+  filter: drop-shadow(5px 5px 5px #666666);
+}
+
+nav.navbar ul.navigation-menu {
+  display: flex;
+}
+
+nav.navbar .navigation-menu li {
+  margin: 5px 12px;
+}
+
+nav.navbar .navigation-menu li a {
+  padding: 3px 5px;
+  font-family: "KoHo", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  position: relative;
+}
+nav.navbar .navigation-menu li a:hover::before {
+  transform: scaleX(1);
+  transition: 0.3s;
+  transform-origin: left;
+}
+nav.navbar .navigation-menu li a::before {
+  content: "";
+  background-color: var(--primary-color);
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: scaleX(0);
+  transition: 0.3s;
+  transform-origin: left;
+}
+
+nav.navbar .search {
+  position: relative;
+  display: flex;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 13px;
+}
+
+nav.navbar .search input {
+  outline: none;
+  border: none;
+  border-radius: 13px;
+  padding: 0px 13px 2px;
+}
+
+nav.navbar .search button {
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 13px;
+  border: 2px solid #fff;
+  padding: 3px 8px 6px;
+}
+
+nav.navbar .navigation-toggle {
+  display: none;
+}
+
+nav.navbar .login ul{
+  display: flex;
+  color: var(--primary-color);
+}
+nav.navbar .login ul li a{
+  color: var(--primary-color);
+  font-weight: 600;
+
+}
+/* ******** INTRO SECTION******* */
+section.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  width: 100%;
+}
+
+section.intro .heading {
+  color: var(--primary-color);
+  z-index: 1;
+  font-size: 2.5rem;
+  text-shadow: 0 0 4px #fff;
+  text-align: center;
+  background: #edc7b79f;
+  padding: 2% 5%;
+  border: 6px double;
+  border-radius: 4px;
+
+}
+
+section.intro::before {
+  content: "";
+  background: url("../images/intro-background2.jpg") center center/cover
+    no-repeat;
+  position: absolute;
+  top: 0;
+  height: 30rem;
+  width: 100%;
+  z-index: -99;
+}
+
+/* ************** OUR SPECIALITIES SECTION*************** */
+
+section.ourSpecialities {
+  background: var(--background-color);
+  padding-top: 50px;
+}
+
+.productCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.productCards .card {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 20px 2px;
+  background-color: var(--secondary-color);
+  margin: 4px;
+  cursor: pointer;
+}
+.productCards .card:hover img {
+  transform: scale(1.05) rotate(8deg);
+  transition: 4s;
+}
+
+.productCards .card img {
+  width: 10.8rem;
+  height: 9.7rem;
+}
+.productCards .card .card-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* **********  ABOUT US ********** */
+section#about {
+  padding-top: 50px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: var(--background-color);
+}
+
+section#about::before {
+  content: "";
+  background: url("../images/about.jpg") center center/cover no-repeat;
+  position: absolute;
+  top: 143px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+section#about div.aboutInfo {
+  z-index: 1;
+  position: relative;
+  margin: 5rem 2rem 0;
+  background: var(--secondary-color);
+  width: 50%;
+  padding: 20px 30px;
+  color: var(--primary-color);
+  border-radius: 4px;
+}
+
+/* FOOTER SECTION */
+footer {
+  background: var(--secondary-color);
+  position: relative;
+  top: 7rem;
+}
+
+.footerContent {
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+footer .footerlogo {
+  transform: scale(1.3);
+  opacity: 0.5;
+  position: relative;
+  top: 1.4rem;
+  margin-bottom: 50px;
+}
+
+footer .footerlogo img {
+  -webkit-filter: drop-shadow(5px 5px 5px #666666);
+  filter: drop-shadow(5px 5px 5px #666666);
+}
+
+footer .footerContent .socialMedia {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .footerContent .socialMedia .iconWrapper img {
+  width: 30px;
+  margin: 3px 8px;
+  filter: invert(100);
+}
+footer .footerContent .footerMain {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+footer .footerContent .footerMain ul {
+  margin: 0 20px;
+}
+
+footer .footerContent .footerMain ul li a {
+  color: var(--primary-color);
+}
+footer .footerContent .footerMain ul li a:hover {
+  border-bottom: 1px solid var(--background-color);
+  color: var(--background-color);
+}
+
+.copyright {
+  margin-top: 30px;
+  color: var(--primary-color);
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+/* ************* UTILITY CLASSES **************** */
+h1.heading {
+  font-size: 1.8rem;
+  margin: 10px 0;
+  color: var(--primary-color);
+}
+hr {
+  margin: 0 60px;
+  border: 2px solid var(--secondary-color);
+}
+
+button.btn {
+  padding: 0.5rem 1.5rem;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 4px;
+  margin-top: 8px;
+  border: 0;
+  width: auto;
+  cursor: pointer;
+}
+a.btn{
+  padding: 0.5rem 1.5rem;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 4px;
+  margin-top: 8px;
+  width: auto;
+  display: inline-block;
+}
+button.btn:hover {
+  transform: scale(0.98);
+  transition: 0.3s;
+}
+
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+input, select, textarea {
+  outline: none;
+  border: none;
+  color: var(--primary-color);
+}
+input:focus, select:focus, textarea:focus{
+  outline:2px solid var(--primary-color);
+}
